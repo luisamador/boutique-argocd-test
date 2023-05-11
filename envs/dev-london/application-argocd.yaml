@@ -12,8 +12,8 @@ spec:
     path: chart
     helm:
       valueFiles:
-      - ../envs/dev-london/values-version.yaml
-      - ../envs/dev-london/values-replicas.yaml
+      - $values/envs/dev-london/values-version.yaml
+      - $values/envs/dev-london/values-replicas.yaml
   destination:
     server: https://60D902FAFD324E1B35D707D343B47646.gr7.eu-west-2.eks.amazonaws.com
     namespace: boutique
