@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: boutique-dev
+  name: boutique
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,10 +9,11 @@ spec:
   project: default
   source:
     repoURL: https://github.com/luisamador/boutique-argocd-test.git
-    path: dev
+    path: envs/dev-london
     helm:
       valueFiles:
-      - dev-values.yaml
+      - values-version.yaml
+      - values-replicas.yaml
   destination:
     server: https://60D902FAFD324E1B35D707D343B47646.gr7.eu-west-2.eks.amazonaws.com
     namespace: boutique
