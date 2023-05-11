@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/luisamador/boutique-argocd-test.git
-    path: envs/dev-london
+    path: chart
     helm:
       valueFiles:
       - ../envs/dev-london/values-version.yaml
